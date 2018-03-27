@@ -1,0 +1,14 @@
+package com.nisum.java8features;
+interface Sayable{  
+    void say();  
+}  
+public class InstanceMethodReference {  
+    public void saySomething(){  
+        System.out.println("Hello, this is non-static method.");  
+    }  
+    public static void main(String[] args) {  
+       InstanceMethodReference reference=new InstanceMethodReference();
+       Sayable sayable=reference::saySomething;
+       sayable.say();
+    }  
+}  
